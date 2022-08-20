@@ -1,10 +1,20 @@
 # HANDYMAN CHATBOT
 
 This is a basic chatbot for Handyman Prosthetic, an arm prosthetics company.
-This chatbot is designed from deep learning on text data, with limited response set.
-Here's a real sample conversation with Handy, the AI chatbot:
+Handy is a chatbot trained using deep learning on text data, with a limited response set.
 
-```bash
+The chatbot.ipynb file has details regarding the training and testing of Handy.
+The handy_chatbot.py is the actual file used to run Handy
+
+To run the chatbot on your system, download the files and run the following command:
+```
+python .py
+```
+
+
+Here's a real sample conversation with Handy:
+
+```
 Handy: Hi! I am Handy, AI chatbot of Handyman Prosthetics. How may I help you?
 user: Hi Handy. Tell me about your company
 Handy: Handyman Prosthetics create hand prosthesis and exoskeleton support for people who lost their arms or the ability to control it.
@@ -29,3 +39,5 @@ Handy: https://forms.gle/C6Em8mSkH5zgbS576
 user: Ok. Thank you
 Handy: Thank you for contacting us. Have a nice day!
 ```
+
+

@@ -8,7 +8,7 @@ The handy_chatbot.py is the actual file used to run Handy
 
 To run the chatbot on your system, download the files and run the following command:
 ```
-python .py
+python handy_chatbot.py
 ```
 
 

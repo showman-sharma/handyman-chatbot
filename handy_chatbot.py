@@ -1,24 +1,14 @@
 import nltk
-# nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
-import tensorflow as tf
 from nltk.corpus import stopwords
 from sklearn import preprocessing
 import numpy as np
-import pandas as pd
 import os
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import scale
 import pickle
-
 from tensorflow import keras
-from tensorflow.keras import optimizers
-from tensorflow.keras.regularizers import l2
-
 
 lemmatizer = WordNetLemmatizer()
 
-#Predict for multiple samples using batch processing
 #Custom tokenizer to remove stopwords and use lemmatization
 def customtokenize(str):
     #Split string as tokens
@@ -50,7 +40,6 @@ for reply_class in bot_reply_classes:
         bot_replies[reply_class] = f.readlines()
 
 #Conversation        
-
 start_state = 'start_convo'
 end_state = 'end_convo'
 
@@ -65,6 +54,5 @@ while state!=end_state:
     prediction=np.argmax( loaded_model.predict(predict_tfidf), axis=1 );
     
     state = encoder.inverse_transform(prediction)[0]
-#     print(state)
 for line in bot_replies[state]:
     print('Handy: '+line.strip())
